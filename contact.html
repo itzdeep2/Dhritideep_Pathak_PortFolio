@@ -1,55 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="production" data-theme="rose" data-color-scheme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Dhritideep Pathak</title>
+  <title>Contact - Dhritideep Pathak</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-  <style>body { font-family: "Inter", sans-serif !important; }</style>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif !important;
+      color-scheme: dark;
+    }
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+  </style>
 </head>
-<body class="bg-[#020617] text-white min-h-screen">
-  <!-- Navbar -->  
-   <header class="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
-    <div class="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
-      <div class="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
-        <nav class="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
-          <div class="flex justify-between items-center md:hidden px-2">
-            <a href="index.html" class="text-white font-bold">Portfolio</a>
-            <button class="text-white p-2">☰</button>
-          </div>
-          <div class="hidden md:block">
-            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
-              <a href="index.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Home</a>
-              <a href="skills.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Skills</a>
-              <a href="experience.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Experience</a>
-              <a href="education.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Education</a>
-              <a href="projects.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Projects</a>
-              <a href="contact.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 bg-white/15 text-white">Contact</a>
+<body class="min-h-screen bg-black text-white relative">
+
+  <!-- Floating Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:py-6">
+    <div class="max-w-7xl mx-auto flex justify-center">
+      <div class="hidden md:flex gap-6 px-8 py-4 rounded-full border border-cyan-500/30 bg-black/40 backdrop-blur-md">
+        <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-sm">
+          <span>🏠</span><span>Home</span>
+        </a>
+        <a href="skills.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-sm">
+          <span>⚙️</span><span>Skills</span>
+        </a>
+        <a href="experience.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-sm">
+          <span>💼</span><span>Experience</span>
+        </a>
+        <a href="education.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-sm">
+          <span>📚</span><span>Education</span>
+        </a>
+        <a href="projects.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-sm">
+          <span>📁</span><span>Projects</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 transition-colors text-sm font-semibold">
+          <span>✉️</span><span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="min-h-screen text-white bg-black relative pt-24 pb-16">
+    <div class="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+
+    <section class="container mx-auto px-4 relative z-10 flex items-center justify-center">
+      <div class="max-w-6xl w-full">
+        
+        <!-- Header -->
+        <div class="mb-16 text-center">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">Get In <span class="text-cyan-400">Touch</span></h1>
+          <p class="text-gray-400 text-lg">Let's connect and discuss opportunities</p>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="grid md:grid-cols-2 gap-12">
+          
+          <!-- Contact Info List -->
+          <div>
+            <h2 class="text-2xl font-bold mb-8 text-cyan-400">Contact Information</h2>
+            <div class="space-y-4">
+              
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📧</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Email (Personal)</p>
+                    <a href="mailto:dhritideep@icloud.com" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">dhritideep@icloud.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📧</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Email (Professional)</p>
+                    <a href="mailto:dhritideeppathak@cybercrimegov.cooo.in" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">dhritideeppathak@cybercrimegov.cooo.in</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📱</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Phone</p>
+                    <a href="tel:+918011860492" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">+91 8011860492</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">💰</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">UPI</p>
+                    <p class="text-cyan-400 font-medium break-all">dhritideeppathak@fam</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📸</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Instagram</p>
+                    <a href="https://www.instagram.com/itz_deep_2/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">@itz_deep_2</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📱</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Telegram</p>
+                    <a href="https://t.me/dhritideeppathak" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">@dhritideeppathak</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">👤</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Facebook</p>
+                    <a href="https://www.facebook.com/share/1DPMnqLgwq/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">Dhritideep Pathak</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-900 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-colors">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">🌐</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-gray-400 text-sm mb-1">Google Cloud Profile</p>
+                    <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-medium break-all">View Credentials</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-        </nav>
-      </div>
-    </div>
-  </header>
 
-  <main class="bg-[#020617] text-white min-h-screen pt-32 pb-20 flex flex-col justify-center items-center">
-    <div class="container mx-auto px-4 max-w-2xl text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 backdrop-blur-sm border border-teal-500/20 mb-8">
-        <span class="text-teal-400 text-sm font-medium">What's Next?</span>
+          <!-- Contact Form -->
+          <div>
+            <h2 class="text-2xl font-bold mb-8 text-cyan-400">Send Me a Message</h2>
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message ready to dispatch!');">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                <input type="text" id="name" name="name" required class="w-full bg-gray-900 border border-cyan-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="Your name">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full bg-gray-900 border border-cyan-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="your@email.com">
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                <textarea id="message" name="message" required rows="5" class="w-full bg-gray-900 border border-cyan-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors resize-none" placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="w-full bg-cyan-500 text-black font-bold py-3 rounded-lg hover:bg-cyan-400 transition-colors">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Quick Response Banner -->
+        <div class="mt-16 bg-gray-900 border border-cyan-500/30 rounded-xl p-8 text-center">
+          <h3 class="text-2xl font-bold mb-4">Quick Response</h3>
+          <p class="text-gray-400 mb-4">I typically respond to messages within 24 hours. Feel free to reach out on any platform!</p>
+          <p class="text-cyan-400 font-semibold">Looking forward to hearing from you! 🚀</p>
+        </div>
+
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Get In Touch</h2>
-      <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-        I'm always open to discussing new projects, creative ideas, cybersecurity challenges, or opportunities to be part of your vision. Let's build something secure and extraordinary.
-      </p>
-      <a href="mailto:your-email@example.com" class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-[2px] rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]">
-        <span class="block w-full px-10 py-4 rounded-[10px] bg-gray-900 transition-all duration-300 group-hover:bg-transparent">
-          <span class="relative flex items-center justify-center gap-2 text-white font-bold text-lg">
-            Say Hello 👋
-          </span>
-        </span>
-      </a>
-    </div>
+    </section>
   </main>
+
 </body>
 </html>

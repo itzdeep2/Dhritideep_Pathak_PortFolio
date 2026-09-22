@@ -4,14 +4,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Skills | Dhritideep Pathak</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="style.css">
-  <style>body { font-family: "Inter", sans-serif !important; }</style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    @keyframes gradient-x {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .animate-gradient-x {
+      animation: gradient-x 3s linear infinite;
+      background-size: 200% 200%;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .animate-shimmer {
+      animation: shimmer 2s infinite;
+    }
+
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(100, 100, 255, 0.1) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(100, 100, 255, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+  </style>
 </head>
 <body class="bg-[#020617] text-white min-h-screen">
+
   <!-- Navbar -->
   <header class="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
     <div class="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
@@ -23,12 +55,12 @@
           </div>
           <div class="hidden md:block">
             <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
-              <a href="index.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Home</a>
-              <a href="skills.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 bg-white/15 text-white">Skills</a>
-              <a href="experience.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Experience</a>
-              <a href="education.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Education</a>
-              <a href="projects.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Projects</a>
-              <a href="contact.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white">Contact</a>
+              <a href="index.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white"><span>Home</span></a>
+              <a href="skills.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 bg-white/15 text-white"><span>Skills</span></a>
+              <a href="experience.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white"><span>Experience</span></a>
+              <a href="education.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white"><span>Education</span></a>
+              <a href="projects.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white"><span>Projects</span></a>
+              <a href="contact.html" class="px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-gray-300 hover:text-white"><span>Contact</span></a>
             </div>
           </div>
         </nav>
@@ -36,66 +68,445 @@
     </div>
   </header>
 
-  <main class="bg-[#020617] text-white min-h-screen pt-32 pb-20">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><span class="gradient-text">Technical Arsenal</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="shimmer-card p-6 rounded-xl bg-gray-900 border border-gray-800 relative overflow-hidden group">
-          <div class="text-3xl mb-4">🛡️</div>
-          <h3 class="text-xl font-semibold mb-4 text-white group-hover:text-blue-400 transition-colors">Cybersecurity</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Ethical Hacking & Penetration Testing</li>
-            <li>Local Network Security (Tailscale, VPNs)</li>
-            <li>Open-Source Intelligence (ScanInfoga)</li>
-          </ul>
+  <!-- Main Content -->
+  <main class="pt-16 lg:pt-0 text-white min-h-screen bg-[#020617] relative">
+    <div class="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+
+    <section class="container mx-auto px-4 py-24 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        
+        <!-- Frontend Development -->
+        <div class="group relative overflow-hidden bg-gray-900/80 border border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 rounded-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+          <div class="p-6 relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 rounded-xl bg-gray-800/50 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml w-8 h-8"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Frontend Development</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                </span>
+                <span class="font-medium text-sm">React</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Next.js</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                </span>
+                <span class="font-medium text-sm">TypeScript</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Tailwind CSS</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                </span>
+                <span class="font-medium text-sm">HTML5</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">CSS3</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shimmer-card p-6 rounded-xl bg-gray-900 border border-gray-800 relative overflow-hidden group">
-          <div class="text-3xl mb-4">☁️</div>
-          <h3 class="text-xl font-semibold mb-4 text-white group-hover:text-teal-400 transition-colors">Cloud & AI</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Google Cloud Architecture</li>
-            <li>Generative AI & Model Context Protocol</li>
-            <li>AI Agents Development (Kaggle x Google)</li>
-          </ul>
+
+        <!-- Backend Development -->
+        <div class="group relative overflow-hidden bg-gray-900/80 border border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 rounded-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+          <div class="p-6 relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 rounded-xl bg-gray-800/50 text-green-400 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-8 h-8"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Backend Development</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path><path d="m7 16.5-4.74-2.85"></path><path d="m7 16.5 5-3"></path><path d="M7 16.5v5.17"></path><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path><path d="m17 16.5-5-3"></path><path d="m17 16.5 4.74-2.85"></path><path d="M17 16.5v5.17"></path><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"></path><path d="M12 8 7.26 5.15"></path><path d="m12 8 4.74-2.85"></path><path d="M12 13.5V8"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Node.js</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                </span>
+                <span class="font-medium text-sm">Python</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+                </span>
+                <span class="font-medium text-sm">PostgreSQL</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+                </span>
+                <span class="font-medium text-sm">MongoDB</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                </span>
+                <span class="font-medium text-sm">REST APIs</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg>
+                </span>
+                <span class="font-medium text-sm">GraphQL</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shimmer-card p-6 rounded-xl bg-gray-900 border border-gray-800 relative overflow-hidden group">
-          <div class="text-3xl mb-4">⚡</div>
-          <h3 class="text-xl font-semibold mb-4 text-white group-hover:text-blue-400 transition-colors">Hardware & Embedded</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>ESP32, Arduino Uno, Digispark ATtiny85</li>
-            <li>RFID, NFC, and Analog RGB Integration</li>
-            <li>Hardware-level Firmware Flashing</li>
-          </ul>
+
+        <!-- UI/UX Design -->
+        <div class="group relative overflow-hidden bg-gray-900/80 border border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 rounded-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+          <div class="p-6 relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 rounded-xl bg-gray-800/50 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left w-8 h-8"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">UI/UX Design</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"></path><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"></path><path d="M14.5 17.5 4.5 15"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Figma</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Responsive Design</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Wireframing</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Prototyping</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shimmer-card p-6 rounded-xl bg-gray-900 border border-gray-800 relative overflow-hidden group">
-          <div class="text-3xl mb-4">💻</div>
-          <h3 class="text-xl font-semibold mb-4 text-white group-hover:text-teal-400 transition-colors">Software Engineering</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>JavaScript & Tampermonkey Scripting</li>
-            <li>Automated Web Solvers & Bypass Scripts</li>
-            <li>Custom Full Auto-Solvers</li>
-          </ul>
+
+        <!-- Cloud & DevOps -->
+        <div class="group relative overflow-hidden bg-gray-900/80 border border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 rounded-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+          <div class="p-6 relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 rounded-xl bg-gray-800/50 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-8 h-8"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Cloud &amp; DevOps</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">AWS</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path><path d="m7 16.5-4.74-2.85"></path><path d="m7 16.5 5-3"></path><path d="M7 16.5v5.17"></path><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path><path d="m17 16.5-5-3"></path><path d="m17 16.5 4.74-2.85"></path><path d="M17 16.5v5.17"></path><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"></path><path d="M12 8 7.26 5.15"></path><path d="m12 8 4.74-2.85"></path><path d="M12 13.5V8"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Docker</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </span>
+                <span class="font-medium text-sm">CI/CD</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Kubernetes</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Git</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                </span>
+                <span class="font-medium text-sm">Linux</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shimmer-card p-6 rounded-xl bg-gray-900 border border-gray-800 relative overflow-hidden group">
-          <div class="text-3xl mb-4">🖥️</div>
-          <h3 class="text-xl font-semibold mb-4 text-white group-hover:text-blue-400 transition-colors">Server Admin & Infra</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Self-Hosted Server Deployment</li>
-            <li>Tailscale MagicDNS Routing</li>
-            <li>Remote Network Game Streaming (Sunshine/Moonlight)</li>
-          </ul>
+
+        <!-- Tools & Technologies -->
+        <div class="group relative overflow-hidden bg-gray-900/80 border border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 rounded-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+          <div class="p-6 relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 rounded-xl bg-gray-800/50 text-pink-400 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu w-8 h-8"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Tools &amp; Technologies</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                </span>
+                <span class="font-medium text-sm">VS Code</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Jest</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Webpack</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Redux</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Firebase</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Vercel</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Vite</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shimmer-card p-6 rounded-xl bg-gray-900 border border-gray-800 relative overflow-hidden group">
-          <div class="text-3xl mb-4">🎨</div>
-          <h3 class="text-xl font-semibold mb-4 text-white group-hover:text-teal-400 transition-colors">Design & Web</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Cyberpunk/Dark-Mode Aesthetics</li>
-            <li>HTML5, CSS3, Tailwind</li>
-            <li>Responsive Grid Architectures</li>
-          </ul>
+
+        <!-- Certifications & Credentials -->
+        <div class="group relative overflow-hidden bg-gray-900/80 border border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 rounded-lg">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+          <div class="p-6 relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 rounded-xl bg-gray-800/50 text-yellow-400 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+              </div>
+              <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Certifications &amp; Credentials</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Ethical Hacker Professional</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Indian Institute of Cyber Security</span>
+              </div>
+              <div class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Google Cloud</span>
+              </div>
+              <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 rounded-lg">
+                <span class="transform group-hover/badge:scale-110 transition-transform duration-300 text-blue-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </span>
+                <span class="font-medium text-sm">Public Profile</span>
+              </a>
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
+
+      <!-- Google Cloud Skill Badges Section -->
+      <h2 class="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-yellow-400">Google Cloud Skill Badges</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Badge 1 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Generative AI Explorer
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-24
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 2 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Introduction to Generative AI
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-24
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 3 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Introduction to Image Generation
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-24
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 4 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Introduction to Responsible AI
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-25
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 5 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Prompt Design in Vertex AI
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-25
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 6 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Introduction to LLMs
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-25
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 7 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Create a RAG Agent with Vertex AI Search
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-25
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 8 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Introduction to Gen AI Studio
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-25
+            </p>
+          </div>
+        </a>
+
+        <!-- Badge 9 -->
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="block">
+          <div class="bg-gray-900/80 p-4 border border-gray-700 hover:border-green-400/50 hover:scale-[1.02] transition-all duration-300 rounded-lg shadow-lg">
+            <h4 class="text-lg font-semibold text-white flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-green-400 shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+              Gen AI Basics
+            </h4>
+            <p class="text-sm text-gray-400 flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4 text-gray-500"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Completed: 2024-03-26
+            </p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Public Profile Link Button -->
+      <div class="text-center mt-12">
+        <a href="https://www.skills.google/public_profiles/47900aeb-936c-44f8-8a57-b9b58662e33a" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-lg font-medium text-blue-400 hover:text-blue-300 transition duration-300">
+          View Official Google Cloud Public Profile
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link ml-2 w-5 h-5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        </a>
+      </div>
+    </section>
   </main>
+
 </body>
 </html>
