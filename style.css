@@ -1,0 +1,93 @@
+@keyframes meteor {
+  from { transform: rotate(215deg) translateX(0); opacity: 1; }
+  to { transform: rotate(215deg) translateX(220px); opacity: 0; }
+}
+.animate-meteor { animation: meteor 2s linear infinite; }
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(-1deg); }
+}
+.animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #34d399, #60a5fa);
+  background-size: 200% auto;
+  animation: gradient-shift 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradient-x-jsx-3886200730 {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  animation: gradient-x-jsx-3886200730 3s linear infinite;
+  background-size: 200% 200%;
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(45deg, #60a5fa, #34d399);
+  padding: 2px;
+  border-radius: 0.75rem;
+}
+.code-window {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #091121;
+}
+.window-header {
+  background: #0b4663;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.window-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.window-dot:hover { transform: scale(1.2); }
+pre {
+  background: #091121 !important;
+  padding: 1.5rem !important;
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  color: #a5d6ff !important;
+}
+
+/* Card Hover Effects */
+.shimmer-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.shimmer-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(96, 165, 250, 0.15);
+}
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(45deg, #60a5fa, #2dd4bf);
+  box-shadow: 0 10px 30px -10px rgba(45, 212, 191, 0.2);
+}
