@@ -2,7 +2,7 @@
 
 my portfolio site for the ysws builder track.
 
-- **live site:** https://itzdeep2.github.io/builder-page/
+- **live site:** https://itzdeep2.github.io/Dhritideep_Pathak_PortFolio/
 
 ## structure
 - `index.html` — home
