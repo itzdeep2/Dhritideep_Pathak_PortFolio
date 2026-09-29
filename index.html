@@ -4,6 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dhritideep Pathak | Portfolio</title>
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="Ggvd_MsZhS361D2fOhzSru2p8UmyYrv8L2Kc9K3QR8U" />
+
+  <!-- Structured Data (JSON-LD) for Google Entity Association -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Dhritideep Pathak",
+      "alternateName": "itzdeep2",
+      "url": "https://itzdeep2.github.io/Dhritideep_Pathak_PortFolio/",
+      "sameAs": [
+        "https://github.com/itzdeep2",
+        "https://www.instagram.com/_itz_deep_2_/"
+      ],
+      "jobTitle": "Full-Stack Developer & Ethical Hacker",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guwahati",
+        "addressRegion": "Assam",
+        "addressCountry": "IN"
+      }
+    }
+  }
+  </script>
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -199,11 +227,11 @@ const profile = {
     ],
     education: 'Class 11, SBOA',
     yearOfExperience: 1,
-    hireable: () =&gt; {
+    hireable: () => {
         return (
-            this.certified &amp;&amp;
-            this.passionate &amp;&amp;
-            this.skills.length &gt;= 5
+            this.certified &&
+            this.passionate &&
+            this.skills.length >= 5
         );
     }
 };
